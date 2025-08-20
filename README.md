@@ -63,6 +63,9 @@ Frontend (dans un autre terminal) :
 ```bash
 cd frontend
 npm install
+```
+Configurer le fichier `.env` (voir `frontend/README.md`).
+```bash
 npm run dev
 ```
 
