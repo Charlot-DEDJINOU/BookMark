@@ -27,16 +27,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(generalLimiter);
 
-app.use('/auth', authLimiter, authRoutes);
-app.use('/me', userRoutes);
-app.use('/bookmarks', bookmarkRoutes);
-app.use('/stats', statsRoutes);
-
 // API Documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
   customCss: '.swagger-ui .topbar { display: none }',
   customSiteTitle: 'API de gestion de bookmarks'
 }));
+
+app.use('/auth', authLimiter, authRoutes);
+app.use('/me', userRoutes);
+app.use('/bookmarks', bookmarkRoutes);
+app.use('/stats', statsRoutes);
 
 app.get('/', (req, res) => {
   res.json({
