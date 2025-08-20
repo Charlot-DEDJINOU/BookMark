@@ -5,12 +5,7 @@
       "includeFiles": "{dist/openapi.yaml,node_modules/swagger-ui-dist/**}"
     }
   },
-  "builds": [
-    {
-      "src": "src/app.ts",
-      "use": "@vercel/node"
-    }
-  ],
+  "buildCommand": "npm run build",
   "routes": [
     {
       "src": "/(.*)",
