@@ -195,12 +195,10 @@ const vClickOutside = {
   },
 };
 
-// Formatage de date corrigé
 const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
   const now = new Date();
   
-  // Normaliser les dates à minuit pour une comparaison correcte
   const dateOnly = new Date(date.getFullYear(), date.getMonth(), date.getDate());
   const nowOnly = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   
@@ -261,14 +259,9 @@ const handleMarkAsRead = async () => {
 const handleDelete = async () => {
   closeDropdown();
 
-  if (!confirm("Êtes-vous sûr de vouloir supprimer ce favori ?")) {
-    return;
-  }
-
   isDeleting.value = true;
 
   try {
-    await BookmarkService.deleteBookmark(props.bookmark.id);
     emit("delete", props.bookmark.id);
   } catch (error: any) {
     emit("error", error.message || "Erreur lors de la suppression");

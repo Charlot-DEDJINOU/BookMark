@@ -6,7 +6,7 @@
           <!-- Logo -->
           <router-link to="/dashboard" class="flex items-center space-x-2">
             <BookmarkIcon class="h-8 w-8 text-primary-600" />
-            <span class="text-xl font-bold text-gray-900">BookmarkApp</span>
+            <span class="hidden md:block text-xl font-bold text-gray-900">BookmarkApp</span>
           </router-link>
 
           <!-- Navigation principale -->

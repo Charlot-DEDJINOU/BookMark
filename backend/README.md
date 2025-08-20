@@ -1,6 +1,6 @@
 # BookMarks Backend
 
-Ce projet consiste à créer une application simple et agréable qui permet de gérer ses favoris en ligne. L’utilisateur peut se connecter, organiser ses favoris, et consulter un tableau de bord qui résume ses statistiques de lecture.
+Ce projet consiste à créer une application simple et Une application web de gestion des signets qui permet aux utilisateurs d'enregistrer, d'organiser et de suivre leurs liens favoris. Elle contribue à améliorer la productivité en offrant un accès rapide, une catégorisation claire et des statistiques pertinentes pour mieux gérer les ressources en ligne. Développée avec Vue.js 3, Vite, Vue Router, Axios, Chart.js, Tailwind CSS et TypeScript, et déployée sur Vercel et Render.
 
 ## Prérequis
 
@@ -27,13 +27,13 @@ npm install
 Créez un fichier `.env` à la racine du dossier `backend` en vous basant sur l'exemple ci-dessous :
 
 ```env
-# Configuration de base
 PORT=3000
 NODE_ENV=development
 JWT_SECRET=your-super-secret-jwt-key-here
 JWT_EXPIRES_IN=7200
 ALLOWED_ORIGINS=http://localhost:5173
 MONGODB_URI=mongodb://localhost:27017/bookmark
+APP_PRODUCTION_URI=your-app-production-uri
 ```
 
 > **Remarque :** Adaptez les valeurs selon votre environnement.

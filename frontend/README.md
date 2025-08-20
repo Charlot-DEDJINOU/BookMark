@@ -1,6 +1,6 @@
 # BookMars Frontend
 
-Ce projet consiste à créer une application simple et agréable qui permet de gérer ses favoris en ligne. L’utilisateur peut se connecter, organiser ses favoris, et consulter un tableau de bord qui résume ses statistiques de lecture.
+Une application web de gestion des signets qui permet aux utilisateurs d'enregistrer, d'organiser et de suivre leurs liens favoris. Elle contribue à améliorer la productivité en offrant un accès rapide, une catégorisation claire et des statistiques pertinentes pour mieux gérer les ressources en ligne. Développée avec Vue.js 3, Vite, Vue Router, Axios, Chart.js, Tailwind CSS et TypeScript, et déployée sur Vercel et Render.
 
 ## Prérequis
 

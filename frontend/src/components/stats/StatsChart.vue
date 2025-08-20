@@ -106,9 +106,6 @@ const createChart = async () => {
   // Attendre que le DOM soit mis à jour
   await nextTick();
   
-  console.log('Canvas element:', chartCanvas.value);
-  console.log('Chart data:', chartData.value);
-  
   if (!chartCanvas.value || chartData.value.labels.length === 0) {
     console.log('Canvas ou données manquantes');
     return;
@@ -217,7 +214,6 @@ watch(() => props.data, async () => {
   }
 }, { deep: true });
 
-// Watcher séparé pour s'assurer que le canvas est disponible
 watch(() => chartCanvas.value, async (newVal) => {
   if (newVal && chartData.value.labels.length > 0 && !chartInstance) {
     await createChart();

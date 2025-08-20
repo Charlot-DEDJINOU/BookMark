@@ -43,7 +43,7 @@ export class BookmarkService {
    */
   static async updateBookmark(id: number, bookmarkData: UpdateBookmarkData): Promise<Bookmark> {
     try {
-      const response = await putResource<Bookmark>('/bookmarks/', id, bookmarkData);
+      const response = await putResource<Bookmark>('/bookmarks', id, bookmarkData);
       return response.data;
     } catch (error: any) {
       throw new Error(error.response?.data?.message || 'Erreur lors de la mise à jour du bookmark');
@@ -55,7 +55,7 @@ export class BookmarkService {
    */
   static async deleteBookmark(id: number): Promise<void> {
     try {
-      await removeResource('/bookmarks/',id);
+      await removeResource('/bookmarks',id);
     } catch (error: any) {
       throw new Error(error.response?.data?.message || 'Erreur lors de la suppression du bookmark');
     }
