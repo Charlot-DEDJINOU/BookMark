@@ -60,7 +60,7 @@ interface Props {
   options: SelectOption[];
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   required: false,
   disabled: false,
 });

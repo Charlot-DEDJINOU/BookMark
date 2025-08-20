@@ -41,7 +41,6 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { TrendingUpIcon, TrendingDownIcon } from 'lucide-vue-next';
 
 interface Props {
   title: string;
