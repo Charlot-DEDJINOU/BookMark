@@ -1,6 +1,4 @@
-import { Application } from 'express';
 import swaggerJsdoc from 'swagger-jsdoc';
-import swaggerUi from 'swagger-ui-express';
 
 const options = {
   definition: {
@@ -95,12 +93,4 @@ const options = {
   apis: ['./src/routes/*.ts', './src/controllers/*.ts']
 };
 
-const specs = swaggerJsdoc(options);
-
-export const setupSwagger = (app: Application): void => {
-  app.use('/api-docs', swaggerUi.serve);
-  app.get('/api-docs', swaggerUi.setup(specs, {
-    explorer: true,
-    customCss: '.swagger-ui .topbar { display: none }'
-  }));
-};
+export const swaggerSpec = swaggerJsdoc(options);

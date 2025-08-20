@@ -2,8 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import dotenv from 'dotenv';
+import swaggerUi from 'swagger-ui-express';
 import { connectDatabase } from './config/database';
-import { setupSwagger } from './config/swagger';
+import { swaggerSpec } from './config/swagger';
 import authRoutes from './routes/auth';
 import userRoutes from './routes/user';
 import bookmarkRoutes from './routes/bookmark';
@@ -24,14 +25,18 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-setupSwagger(app);
-
 app.use(generalLimiter);
 
 app.use('/auth', authLimiter, authRoutes);
 app.use('/me', userRoutes);
 app.use('/bookmarks', bookmarkRoutes);
 app.use('/stats', statsRoutes);
+
+// API Documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'API de gestion de bookmarks'
+}));
 
 app.get('/', (req, res) => {
   res.json({
