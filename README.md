@@ -8,8 +8,8 @@ Ce projet consiste à créer une application simple et agréable qui permet de g
 ### 1. Cloner le dépôt
 
 ```bash
-git clone https://github.com/Charlot-DEDJINOU/Collaborative-Notes.git
-cd Collaborative-Notes
+git https://github.com/Charlot-DEDJINOU/BookMark
+cd BookMark
 ```
 
 ### 2. Lancer le projet en local (Node.js)

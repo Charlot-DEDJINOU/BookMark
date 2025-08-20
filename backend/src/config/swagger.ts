@@ -20,7 +20,7 @@ const options = {
         description: 'Serveur de développement'
       },
       {
-        url: 'https://frontend-test-api-eta.vercel.app',
+        url: process.env.APP_PRODUCTION_URI,
         description: 'Serveur de production'
       }
     ],
